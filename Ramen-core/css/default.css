@@ -503,6 +503,9 @@ body.home-page .header-navigation {
 .navbar-nav > li > .dropdown-menu.mega {
 }
 @media (max-width: 1199px) {
+    .product-item .status {
+        font-size: 11px !important;
+    }
 }
 
 #categories-outer .dropdown-menu > li {
