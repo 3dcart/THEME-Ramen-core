@@ -145,14 +145,6 @@
 			</div>
 		</header>
 		<section id="caTnaV" class="categoriesNav navbar-wrapper hidden-xs">
-			
-			<!-- <a href="#" class="sticky-ads abs-right2" data-toggle="modal" data-target="#searchModal">
-				<span class="icon-search"></span>
-			</a> -->
-			<!-- <a href="/view_cart.asp" class="sticky-ads abs-right">
-				<span class="icon-basket"></span>
-			</a> -->
-			
 			<div class="container">
 				<nav id="categories-outer" class="categories navbar-collapse collapse">
 					<!--START: FRAME_CATEGORY-->
@@ -295,11 +287,6 @@
                 <h3>Menu Links</h3>
                 <div id="mobile-menulinks"></div>
             </div>
-            <!-- <div class="mobile-menu-widget">
-                <h3>Contact Us</h3>
-            	<div><a href="mailto:[store_email]"><i class="icon-mail"></i> [store_email]</a></div>
-            	<div><a href="tel:[store_phone]"><i class="icon-phone"></i>[store_phone]</a></div>
-			</div> -->
         </div>
     </nav>
 
@@ -326,8 +313,18 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    <h4 class="modal-title" id="searchLabel">Store Search</h4>
                 </div>
-                <div id="modal-search" class="modal-body">
+                <div class="modal-body">
+                    <div id="msearchBox" class="searchBox">
+                        <form method="get" name="MsearchForm" action="search.asp">
+                            <div class="search-form">
+                                <input type="text" id="" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
+                                <button type="submit" class="search-submit btn btn-default btn-inverse"><span class="icon-search"></span></button>
+                            </div>
+                        </form>
+                        <div class="clear"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -338,12 +335,12 @@
     <link rel="stylesheet" href="/assets/templates/common-core/lib/animate-me/animate.css" type="text/css" media="screen" />
 
 	<!--START: page_scripts-->
-	<script src='assets/templates/common-core/lib/jquery.min.js'></script>
-	<script src='assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js'></script>
+	<script src="assets/templates/common-core/lib/jquery.min.js"></script>
+	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js"></script>
 	<script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js"></script>
 	<script src="assets/templates/common-core/js/core.js"></script>
-	<!-- <script src="assets/templates/[template]/js/scrollreveal.min.js?vcart=7.6.0"></script> -->
-	<!-- <script src="assets/templates/[template]/js/jquery.hoverIntent.js"></script> -->
+	<script src="assets/templates/[template]/js/scrollreveal.min.js?vcart=7.6.0"></script>
+	<script src="assets/templates/[template]/js/jquery.hoverIntent.js"></script>
 	<script src="assets/templates/[template]/js/main.js"></script>
 	[page_scripts]
 	<!--END: page_scripts-->
@@ -359,34 +356,34 @@
 	<!--END: quicksearch-->
 	
 	<!--START: 3dcart stats-->
-<div class="stats hidden"> 
-    <script type="text/javascript">
-        //<![CDATA[
-        var file='/stats/count.asp';
-        var stats_d=new Date();
-        var stats_s=stats_d.getSeconds();
-        var stats_m=stats_d.getMinutes();
-        var stats_x=stats_s*stats_m;
-        var prdID = '[catalogid]';
-        var catID = '[catid]';
-        stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
-        if (navigator.appName=='Netscape'){stats_b='NS';}
-        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
-        if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
-        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
-        stats_v=navigator.appName;
-        stats_fs = window.screen.fontSmoothingEnabled;
-        if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
-        else {stats_c=screen.pixelDepth;}
-        stats_j=navigator.javaEnabled();
-        info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
-        document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
-        //]]>
-    </script>
-    <noscript>
-        <img src="/stats/count.asp" width="90" height="30" alt="" />
-    </noscript>
-</div>
-<!--END: 3dcart stats-->
+	<div class="stats hidden"> 
+		<script type="text/javascript">
+			//<![CDATA[
+			var file='/stats/count.asp';
+			var stats_d=new Date();
+			var stats_s=stats_d.getSeconds();
+			var stats_m=stats_d.getMinutes();
+			var stats_x=stats_s*stats_m;
+			var prdID = '[catalogid]';
+			var catID = '[catid]';
+			stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+			if (navigator.appName=='Netscape'){stats_b='NS';}
+			if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+			if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+			stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
+			stats_v=navigator.appName;
+			stats_fs = window.screen.fontSmoothingEnabled;
+			if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+			else {stats_c=screen.pixelDepth;}
+			stats_j=navigator.javaEnabled();
+			info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+			document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
+			//]]>
+		</script>
+		<noscript>
+			<img src="/stats/count.asp" width="90" height="30" alt="3dcart stats" />
+		</noscript>
+	</div>
+	<!--END: 3dcart stats-->
 </body>
 </html>

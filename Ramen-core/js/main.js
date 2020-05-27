@@ -152,10 +152,10 @@ function moveMenu() {
     }
 
     if (respWidth < 768) {
-		jQuery('#searchBox').appendTo('#modal-search');
+		//jQuery('#searchBox').appendTo('#modal-search');
     }
     else {
-		jQuery('#searchBox').appendTo('#mobile-search');
+		//jQuery('#searchBox').appendTo('#mobile-search');
     }
 
 }
