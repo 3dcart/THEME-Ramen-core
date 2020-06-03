@@ -1464,6 +1464,21 @@ span.freeshipping {
 	max-width: 100%;
 }
 
+.product-items.productList .product-item .img a {
+    position: initial;
+}
+.product-items.productList .product-item .img {
+    border: 1px solid #ececec;
+}
+.product-items.productList .product-item .product-content,
+.product-items.productList .product-item .name,
+.product-items.productList .product-item .price, 
+.product-items.productList .product-item .status, 
+.product-items.productList .product-item .reviews,
+.product-items.productList .product-item .action{
+    text-align: left;
+}
+
 .product-item .action {
 	position: relative;
 	margin: 10px auto auto;
